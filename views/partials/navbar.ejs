@@ -1,0 +1,55 @@
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Forum</a>
+    </div>
+    <form action="/search" class="navbar-form navbar-left" method="post">
+      <div class="form-group">
+        <input type="text" name="q" id="" class="form-control" placeholder="Search...">
+        <button class="btn btn-default" type="submit">Submit</button>
+      </div>
+    </form>
+    <div id="navbar" class="navbar-collapse collapse navbar-right">
+        <a class="navbar-brand" href="/question">Post Question</a>
+       <a class="navbar-brand" href="/questions">Questions</a>
+    <ul class="nav navbar-nav">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Category </a>
+        <ul class="dropdown-menu">
+          <% for(var i = 0; i < categories.length; i++) { %>
+            <li><a href="#"><%= categories[i].name %></a></li>
+          <% } %>
+        </ul>
+      </li>
+      <% if(!user) { %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Signup | Login </a>
+          <ul class="dropdown-menu">
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="/login">Login</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="/add-category">admin</a></li>
+          </ul>
+        </li>
+      </ul>
+        <% } else {  %>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= user.profile.name %> </a>
+            <ul class="dropdown-menu">
+              <li><a href="/profile">profile</a></li>
+              <li><a href="/add-category">Add category</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="/logout">logout</a></li>
+            </ul>
+          </li>
+        <% } %>
+      </ul>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,50 @@
+<div class="container main_signup_body">
+<% layout('layout') -%>
+
+<% if (!user) { %>
+
+  <div class="container">
+    <h2>You must login to view your profile</h2>
+  </div>
+
+<% } else { %>
+  <div class="row">
+    <div class="col-md-6 col-xs-offset-2">
+  <% if (success.length > 0) { %>
+    <div class="alert alert-success alert-dismissible">
+      <button class="close" data-dismiss="alert" aria-label="Close" type="button">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    <%= success %>
+    </div>
+  </div>
+  <% } %>
+<div class="container">
+<div class="col-md-4">
+<div class="jj">
+   <img src="<%= user.profile.picture %>" width="300px" height="300px" class="thumbnail">
+    <h3><%= user.profile.name %></h3>
+    <p><%= user.firstname %> <%= user.lastname %></p>
+    <h4><%= user.email %></h4>
+    <% if(user.place == "" || typeof user.place === 'undefined') { %>
+      <p>Edit to put your place here</p>
+    <% } else { %>
+    <p><%= user.place %></p>
+    <% } %>
+    <hr width="350px" align="left">
+    <% if(user.about == "" || typeof user.about === 'undefined') { %>
+      <p>Edit to put your about yourself here</p>
+    <% } else { %>
+    <p><%= user.about %></p>
+    <% } %>
+
+    <% if(user.address == "" || typeof user.address === 'undefined') { %>
+      <p>Edit to put your address here</p>
+    <% } else { %>
+    <p><%= user.address %></p>
+    <% } %>
+    <a href="/edit-profile" class="btn btn-default">Edit Profile</a><hr width="350px" align="left">
+</div>
+</div>
+  <% } %>
+</div>

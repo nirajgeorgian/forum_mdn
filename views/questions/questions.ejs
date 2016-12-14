@@ -1,0 +1,15 @@
+<% layout('layout') -%>
+<div class="container">
+  <div class="row">
+    <% for(var i = 0; i < question.length; i++) { %>
+    <div class="col-md-4">
+        <div class="thumbnail">
+          <span class="label label-success">Question</span>
+            <p><%= question[i].question %></p>
+            <span class="label label-info">Topics</span>
+            <p><%= question[i].topics %></p>
+        </div>
+    </div>
+    <% } %>
+  </div>
+</div>

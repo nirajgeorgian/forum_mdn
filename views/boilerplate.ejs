@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- link for favricon -->
+    <link rel="icon" href="/images/favicon.ico">
+    <!--[if lt IE 9]>
+    <script>
+      document.createElement("header");
+      document.createElement("footer");
+      document.createElement("section");
+      document.createElement("nav");
+      document.createElement("main");
+      document.createElement("aside");
+      document.createElement("article");
+    </script>
+    <noscript>
+      <strong>Warning</strong>
+      <h2>Your browser does not support javascript</h2>
+    </noscript>
+    <![endif]-->
+    <title>Amazon | Love it</title>
+    <meta name="author" content="nirajgeorgian">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="an dummy forum website build on nodejs and expressjs">
+    <!-- particles.js -->
+    <script src="/js/lib/particle.js"></script>
+    <!-- Css for reset -->
+    <% include ./partials/cssOnly %>
+</head>
+<body>
+
+ <% include ./partials/navbar %><br>
+ <div class="alert alert-success text-center" role="alert"> <strong>Alfa Version</strong> The search feature is not working due to not supporting of elasticsearch. </div>
+
+  <%- body -%>
+
+  <% include ./partials/footer %>
+  <% include ./partials/javascriptOnly.ejs %>
+</body>
+</html>

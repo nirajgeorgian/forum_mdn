@@ -1,0 +1,41 @@
+<% layout('layout') -%>
+<% if (message.length > 0) { %>
+  <div class="alert alert-success alert-dismissible">
+    <button class="close" data-dismiss="alert" aria-label="Close" type="button">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  <%= message %>
+  </div>
+<% } %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="login_form">
+          <form action="question" method="POST" class="form-horizontal" id="resetPassword">
+            <h2>Post a question to the forum</h2>
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Your question</label>
+                    <div class="col-lg-9">
+                        <textarea name="question" class="form-control" rows="6" cols="60"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Any more topics</label>
+                    <div class="col-lg-9">
+                        <input type="text" class="form-control" name="topics" placeholder="Enter with comma seperated"/>
+                    </div>
+                </div>
+                <div class="login_btn">
+                  <button class="btn btn-info" type="submit">Post</button>
+                </div>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./img/04.png" alt="" class="center-block img-responsive img_login" id="logo_header" />
+      </div>
+  </div>
+</div>

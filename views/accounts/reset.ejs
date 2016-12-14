@@ -1,0 +1,35 @@
+<% layout('layout') -%>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <div id="login_form">
+          <form action="#" method="POST" class="form-horizontal" id="resetPassword">
+            <fieldset>
+                <legend>Reset your password</legend>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Password</label>
+                    <div class="col-lg-9">
+                        <input type="password" class="form-control" name="password" placeholder="password"/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-3 control-label">Retype password</label>
+                    <div class="col-lg-9">
+                        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password"/>
+                    </div>
+                </div>
+                <div class="login_btn">
+                  <button class="btn btn-info" type="submit">Reset</button>
+                </div>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="./img/04.png" alt="" class="center-block img-responsive img_login" id="logo_header" />
+      </div>
+  </div>
+</div>
