@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- link for favricon -->
     <link rel="icon" href="/images/favicon.ico">
     <!--[if lt IE 9]>
@@ -21,23 +20,26 @@
       <h2>Your browser does not support javascript</h2>
     </noscript>
     <![endif]-->
-    <title>Amazon | Love it</title>
     <meta name="author" content="nirajgeorgian">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="description" content="an dummy forum website build on nodejs and expressjs">
-    <!-- particles.js -->
-    <script src="/js/lib/particle.js"></script>
-    <!-- Css for reset -->
-    <% include ./partials/cssOnly %>
-</head>
-<body>
+    <title>Demo forum</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" title="no title">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/lib/jquery.min.js" charset="utf-8"></script>
+    <script src="js/lib/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/lib/bootstrapValidator.js" charset="utf-8"></script>
+  </head>
+  <body>
 
- <% include ./partials/navbar %><br>
- <div class="alert alert-success text-center" role="alert"> <strong>Alfa Version</strong> The search feature is not working due to not supporting of elasticsearch. </div>
+    <% include ./partials/navbar %>
+    <div class="alert alert-success text-center banner-alert" role="alert"> <strong>Alfa Version</strong> The search feature is not working due to not supporting of elasticsearch. </div>
 
-  <%- body -%>
+      <%- body -%>
 
-  <% include ./partials/footer %>
-  <% include ./partials/javascriptOnly.ejs %>
+    <% include ./partials/footer %>
+    <script src="js/app.js" charset="utf-8"></script>
 </body>
 </html>
